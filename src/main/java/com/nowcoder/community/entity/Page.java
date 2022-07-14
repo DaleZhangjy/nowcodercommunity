@@ -5,6 +5,9 @@ package com.nowcoder.community.entity;
  */
 public class Page {
 
+
+    //封装Current:
+    // SpringMVC会自动将请求中的参数映射到Controller方法参数上，默认按照同名规则映射，无论是基本类型与之同名，还是对象中的成员与之同名。
     // 当前页码
     private int current = 1;
     // 显示上限
