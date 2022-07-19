@@ -14,7 +14,8 @@
 	<name>community</name>
 	<description>nowcoder community</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>15</java.version>
+		<elasticsearch.version>7.10.2</elasticsearch.version>
 	</properties>
 	<dependencies>
 		<!-- 自己导入的aop依赖 -->
@@ -90,7 +91,29 @@
 			<artifactId>spring-kafka</artifactId>
 <!--			<version>2.8.7</version>-->
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+			<version>2.5.7</version>
+		</dependency>
 
+		<dependency>
+			<groupId>org.elasticsearch</groupId>
+			<artifactId>elasticsearch</artifactId>
+			<version>7.10.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-elasticsearch</artifactId>
+			<version>4.2.7</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>transport</artifactId>
+					<groupId>org.elasticsearch.client</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 
 
 	</dependencies>
