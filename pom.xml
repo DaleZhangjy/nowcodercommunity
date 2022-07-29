@@ -13,6 +13,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>community</name>
 	<description>nowcoder community</description>
+	<packaging>war</packaging>
+
 	<properties>
 		<java.version>15</java.version>
 		<elasticsearch.version>7.10.2</elasticsearch.version>
@@ -152,6 +154,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>ROOT</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
